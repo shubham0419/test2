@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip Organizer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Trip Organizer</h1>
+        <button id="dark-mode-toggle">Dark Mode</button>
+    </header>
+    <main>
+        <section id="schedule-form">
+            <h2>Add New Schedule</h2>
+            <form id="new-schedule-form">
+                <label for="destination">Destination:</label>
+                <input type="text" id="destination" required>
+                
+                <label for="date">Date:</label>
+                <input type="date" id="date" required>
+                
+                <button type="submit">Add Schedule</button>
+            </form>
+        </section>
+        
+        <section id="schedule-list">
+            <h2>My Schedules</h2>
+            <div id="schedule-items">
+                <!-- Schedule items will be dynamically added here -->
+            </div>
+        </section>
+
+        <section id="day-by-day-schedule">
+            <h2>Day-by-Day Schedule</h2>
+            <div id="day-schedules">
+                <!-- Day schedules will be dynamically added here -->
+            </div>
+        </section>
+
+        <section id="map-section">
+            <h2>Travel Map</h2>
+            <div id="map"></div>
+        </section>
+    </main>
+    
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places&callback=initMap" async defer></script>
+    <script src="script.js"></script>
+</body>
+</html>
